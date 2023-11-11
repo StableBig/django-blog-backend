@@ -1,8 +1,8 @@
-  {% extends 'base.html' %}
-  {% block title %} Sensive Blog - Home {% endblock %}
-  {% load static %}
+{% extends 'base.html' %}
+{% block title %} Sensive Blog - Home {% endblock %}
+{% load static %}
 
-  {% block content %}
+{% block content %}
 
   <!--================Header Menu Area =================-->
 
@@ -13,7 +13,7 @@
         <div class="hero-banner">
           <div class="hero-banner__content">
             <h3>Tours &amp; Travels</h3>
-            <h1>Amazing Places on earth</h1>
+            <h1>Amazing Places on Earth</h1>
             <h4>December 12, 2018</h4>
           </div>
         </div>
@@ -56,7 +56,7 @@
                 {% if fresh_post.image_url %}
                 <img class="img-fluid" src="{{fresh_post.image_url}}" alt="post" />
                 {% else %}
-                <img class="img-fluid" src="{%static 'img/banner/blog.png' %}" alt="man" />
+                <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="man" />
                 {% endif %}
                 <ul class="thumb-info" style="max-width: 550px">
                   <li>
@@ -106,18 +106,24 @@
             </div>
           </div>
 
-          <!-- Start Blog Post Siddebar -->
+          <!-- Start Blog Post Sidebar -->
           <div class="col-lg-4 sidebar-widgets">
             <div class="widget-wrap">
               <div class="single-sidebar-widget newsletter-widget">
                 <h4 class="single-sidebar-widget__title">Newsletter</h4>
                 <div class="form-group mt-30">
                   <div class="col-autos">
-                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email"
-                      onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'" />
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inlineFormInputGroup"
+                      placeholder="Enter email"
+                      onfocus="this.placeholder = ''"
+                      onblur="this.placeholder = 'Enter email'"
+                    />
                   </div>
                 </div>
-                <button class="bbtns d-block mt-20 w-100">Subcribe</button>
+                <button class="bbtns d-block mt-20 w-100">Subscribe</button>
               </div>
 
               <div class="single-sidebar-widget post-category-widget">
@@ -127,11 +133,11 @@
               </div>
             </div>
           </div>
-          <!-- End Blog Post Siddebar -->
+          <!-- End Blog Post Sidebar -->
         </div>
       </div>
     </section>
     <!--================ End Blog Post Area =================-->
   </main>
 
-  {% endblock %}
+{% endblock %}
